@@ -82,12 +82,12 @@ Dapat digunakan di berbagai ukuran layar.
 ## 🖥️ Preview
 
 <p align="center">
-  <img src="screenshots/home.png" width="90%">
+  <img src="https://i.pinimg.com/736x/57/ce/cb/57cecb198ee698ced4ab03aa4aa4ffc8.jpg" width="90%">
 </p>
 
 <p align="center">
-  <img src="screenshots/login.png" width="44%">
-  <img src="screenshots/register.png" width="44%">
+  <img src="https://i.pinimg.com/736x/9e/c7/51/9ec751758ffab85781a254d3c477399a.jpg" width="44%">
+  <img src="https://i.pinimg.com/736x/b8/1a/38/b81a388ee4f0bedfcf5c291c764e2b9d.jpg" width="44%">
 </p>
 
 ---
