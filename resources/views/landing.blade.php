@@ -1,177 +1,12 @@
-<!DOCTYPE html>
+@extends('master')
 
-<html class="light" lang="en">
-
-<head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta content="web_standard" name="shell-type" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap"
-        rel="stylesheet" />
-    <style>
-        @layer base {
-
-            html,
-            body {
-                margin: 0;
-                padding: 0;
-            }
-
-            body {
-                overscroll-behavior: none;
-            }
-
-            main>:first-child {
-                margin-top: 0 !important;
-            }
-
-            main>:last-child {
-                margin-bottom: 0 !important;
-            }
-        }
-
-        ::-webkit-scrollbar {
-            display: none;
-        }
-    </style>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "surface-container-highest": "#e0e3e5",
-                        "surface-container": "#eceef0",
-                        "inverse-on-surface": "#eff1f3",
-                        "on-secondary": "#ffffff",
-                        "tertiary-container": "#6c748b",
-                        "on-error-container": "#93000a",
-                        "error": "#ba1a1a",
-                        "surface": "#f7f9fb",
-                        "surface-container-low": "#f2f4f6",
-                        "surface-variant": "#e0e3e5",
-                        "on-error": "#ffffff",
-                        "on-secondary-container": "#00714d",
-                        "outline-variant": "#bccac0",
-                        "on-primary": "#ffffff",
-                        "tertiary-fixed-dim": "#bec6e0",
-                        "tertiary-fixed": "#dae2fd",
-                        "on-tertiary-container": "#fefcff",
-                        "primary-fixed": "#85f8c4",
-                        "outline": "#6d7a72",
-                        "secondary-container": "#6cf8bb",
-                        "surface-tint": "#006c4a",
-                        "secondary-fixed-dim": "#4edea3",
-                        "secondary-fixed": "#6ffbbe",
-                        "on-tertiary-fixed": "#131b2e",
-                        "surface-dim": "#d8dadc",
-                        "primary": "#006948",
-                        "error-container": "#ffdad6",
-                        "on-primary-fixed": "#002114",
-                        "surface-bright": "#f7f9fb",
-                        "primary-fixed-dim": "#68dba9",
-                        "on-secondary-fixed": "#002113",
-                        "surface-container-lowest": "#ffffff",
-                        "on-primary-fixed-variant": "#005137",
-                        "surface-container-high": "#e6e8ea",
-                        "inverse-primary": "#68dba9",
-                        "inverse-surface": "#2d3133",
-                        "background": "#f7f9fb",
-                        "on-primary-container": "#f5fff7",
-                        "primary-container": "#00855d",
-                        "secondary": "#006c49",
-                        "on-tertiary-fixed-variant": "#3f465c",
-                        "on-background": "#191c1e",
-                        "tertiary": "#545c72",
-                        "on-secondary-fixed-variant": "#005236",
-                        "on-tertiary": "#ffffff",
-                        "on-surface-variant": "#3d4a42",
-                        "on-surface": "#191c1e"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                    "spacing": {
-                        "margin": "3rem",
-                        "space-sm": "0.5rem",
-                        "space-xxl": "3.5rem",
-                        "gutter-mobile": "1rem",
-                        "space-xl": "2.25rem",
-                        "margin-mobile": "1.25rem",
-                        "space-lg": "1.5rem",
-                        "gutter": "1.5rem",
-                        "space-md": "1rem",
-                        "space-xs": "0.25rem"
-                    },
-                    "fontFamily": {
-                        "headline-md": ["Outfit"],
-                        "label-md": ["Outfit"],
-                        "headline-lg": ["Outfit"],
-                        "display-hero-mobile": ["Outfit"],
-                        "body-sm": ["Plus Jakarta Sans"],
-                        "label-tag": ["Outfit"],
-                        "headline-xl-mobile": ["Outfit"],
-                        "headline-xl": ["Outfit"],
-                        "display-hero": ["Outfit"],
-                        "headline-sm": ["Outfit"],
-                        "body-md": ["Plus Jakarta Sans"],
-                        "body-lg": ["Plus Jakarta Sans"],
-                        "label-lg": ["Outfit"],
-                        "label-sm": ["Outfit"],
-                        "data-mono": ["Outfit"]
-                    }
-                }
-            }
-        }
-    </script>
-</head>
-
-<body class="bg-surface font-body-md text-on-surface antialiased selection:bg-emerald-100 selection:text-emerald-900">
-    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-sm">
-        <div class="h-20 w-full px-gutter flex items-center justify-between gap-space-lg">
-            <div class="flex items-center gap-space-lg"><a class="flex items-center gap-2" data-path="explore-arenas"
-                    href="#">
-                    <div
-                        class="w-8 h-8 rounded-lg bg-emerald-600 flex items-center justify-center text-white shadow-sm">
-                        <span class="material-symbols-outlined text-2xl font-bold">sports_tennis</span></div><span
-                        class="font-headline-md text-2xl font-extrabold tracking-tight text-slate-900">loc<span
-                            class="text-emerald-600">Arena</span></span>
-                </a>
-                <div
-                    class="hidden xl:flex items-center bg-slate-100 hover:bg-slate-200/80 rounded-lg px-space-md py-space-xs text-slate-600 gap-space-sm w-72 border border-slate-200 transition-colors">
-                    <span class="material-symbols-outlined text-emerald-600 text-xl">location_on</span>
-                    <div class="flex flex-col flex-1"><span
-                            class="font-label-sm text-[11px] text-slate-400 font-bold uppercase tracking-wider">Lokasi</span><span
-                            class="font-label-md text-label-md text-slate-900 font-semibold truncate">Jakarta Selatan,
-                            ID</span></div><span
-                        class="material-symbols-outlined text-slate-400 text-sm">expand_more</span>
-                </div>
-            </div>
-            <div class="flex items-center gap-space-md"><button
-                    class="px-space-md py-space-sm rounded-lg border border-slate-300 hover:border-slate-400 text-slate-900 hover:bg-slate-50 transition-colors font-label-md text-label-md font-semibold"
-                    type="button">Masuk</button><button
-                    class="px-space-md py-space-sm rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white transition-all font-label-md text-label-md font-bold shadow-sm hover:shadow active:scale-95"
-                    type="button">Daftar</button></div>
-        </div>
-    </header>
+@section('isi')
     <main class="w-full pt-20 bg-surface">
         <div class="flex flex-col w-full">
             <!-- Dynamic Atmospheric Hero (Light Mode) -->
             <section class="relative w-full overflow-hidden bg-slate-50 py-space-xl border-b border-slate-200/70">
                 <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden"><img
-                        alt="Indoor Badminton Sports Hall Arena"
-                        class="w-full h-full object-cover object-center opacity-25"
+                        alt="Indoor Badminton Sports Hall Arena" class="w-full h-full object-cover object-center opacity-25"
                         src="https://lh3.googleusercontent.com/aida/AEtjO1V676bFaFzAox_5Y_4tRv1eGTTQ1L-LII0uE2i8qr5rEl4obu4199KG1uojVU6uph-nuQ_I_WcJieb9mt1NpKNM_AKoW7C3lsh6OLfpKhbuerznj7N03aZTrEV_A3s6zSqZAHR1cV8410Zgp-TeKoVRlB_CNb2LGHWfPd0rqEUQPB38s2Z5OqKz4IYeJfMDRjT3IBDWqPkW_Wjh0tP9RJAaLgUbXnadgHaO9sq6p7Rc2sxEf5JWhTigFbc" />
                     <div class="absolute inset-0 bg-linear-to-b from-white/95 via-white/80 to-slate-50"></div>
                 </div>
@@ -313,7 +148,8 @@
                     <div class="flex items-center gap-space-md">
                         <div
                             class="h-12 w-12 rounded-xl bg-emerald-600 text-white flex items-center justify-center shrink-0 shadow-sm">
-                            <span class="material-symbols-outlined text-2xl">qr_code_scanner</span></div>
+                            <span class="material-symbols-outlined text-2xl">qr_code_scanner</span>
+                        </div>
                         <div>
                             <div class="font-headline-sm text-headline-sm text-slate-900 font-bold">Pesan Online
                                 Langsung Dapat QR Check-in Tanpa Antre!</div>
@@ -386,7 +222,7 @@
                         </button>
                         <!-- Mini Soccer -->
                         <button class="flex items-center gap-space-xs px-space-md py-space-sm rounded-xl bg-white hover:bg-slate-100 text-slate-700 border border-slate-200/90 transition-all active:scale-95 shadow-sm
-e=" button">
+    e=" button">
                             <span class="material-symbols-outlined text-emerald-600 text-xl">stadium</span>
                             <span class="font-label-md text-label-md font-semibold">Mini Soccer</span>
                         </button>
@@ -405,8 +241,8 @@ e=" button">
                 <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-space-md">
                     <div class="flex flex-col"><span
                             class="font-label-sm text-emerald-700 uppercase tracking-widest font-bold">Pilih
-                            Spesifikasi</span><span
-                            class="font-headline-sm text-headline-sm text-slate-900 font-bold">Jenis Lantai
+                            Spesifikasi</span><span class="font-headline-sm text-headline-sm text-slate-900 font-bold">Jenis
+                            Lantai
                             Lapangan</span></div>
                     <div class="flex items-center gap-space-sm overflow-x-auto w-full md:w-auto pb-space-xs"><button
                             class="flex items-center gap-space-xs px-space-md py-space-sm rounded-xl bg-emerald-600 text-white transition-all shadow-sm shrink-0"
@@ -417,8 +253,7 @@ e=" button">
                                 class="material-symbols-outlined text-emerald-600 text-xl">grid_on</span><span
                                 class="font-label-md text-label-md font-semibold">Vinyl</span></button><button
                             class="flex items-center gap-space-xs px-space-md py-space-sm rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 transition-all active:scale-95 shadow-sm shrink-0"
-                            type="button"><span
-                                class="material-symbols-outlined text-emerald-600 text-xl">grass</span><span
+                            type="button"><span class="material-symbols-outlined text-emerald-600 text-xl">grass</span><span
                                 class="font-label-md text-label-md font-semibold">Rumput Sintetis</span></button><button
                             class="flex items-center gap-space-xs px-space-md py-space-sm rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 transition-all active:scale-95 shadow-sm shrink-0"
                             type="button"><span
@@ -442,8 +277,8 @@ e=" button">
                                     Jam</span><span
                                     class="font-data-mono text-emerald-700 font-bold bg-emerald-50 border border-emerald-200 px-space-sm py-0.5 rounded-full"
                                     id="price-display">Rp 350.000</span></div><input
-                                class="w-full accent-emerald-600 h-2 bg-slate-200 rounded-lg cursor-pointer"
-                                max="500000" min="50000"
+                                class="w-full accent-emerald-600 h-2 bg-slate-200 rounded-lg cursor-pointer" max="500000"
+                                min="50000"
                                 oninput="document.getElementById('price-display').innerText = 'Rp ' + Number(this.value).toLocaleString('id-ID')"
                                 step="25000" type="range" value="350000" />
                             <div class="flex justify-between text-slate-400 font-label-sm text-[12px] font-semibold">
@@ -451,8 +286,8 @@ e=" button">
                             </div>
                         </div>
                         <div class="flex flex-col gap-space-xs w-full lg:w-64"><label
-                                class="font-label-sm text-slate-500 uppercase font-bold tracking-wide"
-                                for="sort-by">Urutkan Lapangan</label>
+                                class="font-label-sm text-slate-500 uppercase font-bold tracking-wide" for="sort-by">Urutkan
+                                Lapangan</label>
                             <div class="relative"><select
                                     class="w-full bg-slate-50 border border-slate-200 py-2.5 px-space-sm pr-8 rounded-xl font-label-md text-label-md text-slate-900 font-semibold hover:border-slate-300 focus:outline-none cursor-pointer appearance-none shadow-sm transition-colors"
                                     id="sort-by">
@@ -479,16 +314,16 @@ e=" button">
                             type="button"><span class="material-symbols-outlined text-sm text-emerald-600">shower</span>
                             Kamar Mandi / Shower</button><button
                             class="inline-flex items-center gap-1.5 px-space-md py-1.5 rounded-xl bg-white hover:bg-slate-100 border border-slate-200 text-slate-700 font-label-md text-label-md font-semibold transition-all active:scale-95 shadow-sm"
-                            type="button"><span
-                                class="material-symbols-outlined text-sm text-emerald-600">restaurant</span> Kantin
+                            type="button"><span class="material-symbols-outlined text-sm text-emerald-600">restaurant</span>
+                            Kantin
                             &amp; Cafe</button><button
                             class="inline-flex items-center gap-1.5 px-space-md py-1.5 rounded-xl bg-white hover:bg-slate-100 border border-slate-200 text-slate-700 font-label-md text-label-md font-semibold transition-all active:scale-95 shadow-sm"
-                            type="button"><span
-                                class="material-symbols-outlined text-sm text-emerald-600">checkroom</span> Sewa Rompi /
+                            type="button"><span class="material-symbols-outlined text-sm text-emerald-600">checkroom</span>
+                            Sewa Rompi /
                             Bola</button><button
                             class="inline-flex items-center gap-1.5 px-space-md py-1.5 rounded-xl bg-white hover:bg-slate-100 border border-slate-200 text-slate-700 font-label-md text-label-md font-semibold transition-all active:scale-95 shadow-sm"
-                            type="button"><span
-                                class="material-symbols-outlined text-sm text-emerald-600">lightbulb</span> AC / Lampu
+                            type="button"><span class="material-symbols-outlined text-sm text-emerald-600">lightbulb</span>
+                            AC / Lampu
                             Malam Stadium</button></div>
                 </div>
             </section>
@@ -531,8 +366,7 @@ e=" button">
                                 <!-- Sport Category Top Right -->
                                 <div
                                     class="absolute top-3 right-3 bg-white/90 backdrop-blur-md px-2.5 py-1 rounded-lg font-label-sm text-[11px] text-slate-800 font-bold flex items-center gap-1 shadow-sm">
-                                    <span
-                                        class="material-symbols-outlined text-xs text-emerald-600">sports_soccer</span>
+                                    <span class="material-symbols-outlined text-xs text-emerald-600">sports_soccer</span>
                                     Futsal
                                 </div>
                             </div>
@@ -542,16 +376,14 @@ e=" button">
                                     <div class="flex items-center justify-between gap-space-xs mb-1">
                                         <span
                                             class="font-body-sm text-body-sm text-slate-500 flex items-center gap-1 font-medium">
-                                            <span
-                                                class="material-symbols-outlined text-sm text-emerald-600">pin_drop</span>
+                                            <span class="material-symbols-outlined text-sm text-emerald-600">pin_drop</span>
                                             Bekasi Selatan (1.8 km)
                                         </span>
                                         <div
                                             class="flex items-center gap-1 bg-amber-50 border border-amber-200/80 px-2 py-0.5 rounded">
                                             <span class="material-symbols-outlined text-sm text-amber-500"
                                                 style="font-variation-settings: 'FILL' 1;">star</span>
-                                            <span
-                                                class="font-label-md text-label-md text-slate-900 font-bold">4.9</span>
+                                            <span class="font-label-md text-label-md text-slate-900 font-bold">4.9</span>
                                             <span class="font-label-sm text-xs text-slate-500">(128)</span>
                                         </div>
                                     </div>
@@ -615,8 +447,7 @@ e=" button">
                                 </div>
                                 <div
                                     class="absolute top-3 right-3 bg-white/90 backdrop-blur-md px-2.5 py-1 rounded-lg font-label-sm text-[11px] text-slate-800 font-bold flex items-center gap-1 shadow-sm">
-                                    <span
-                                        class="material-symbols-outlined text-xs text-emerald-600">sports_tennis</span>
+                                    <span class="material-symbols-outlined text-xs text-emerald-600">sports_tennis</span>
                                     Badminton
                                 </div>
                             </div>
@@ -626,16 +457,14 @@ e=" button">
                                     <div class="flex items-center justify-between gap-space-xs mb-1">
                                         <span
                                             class="font-body-sm text-body-sm text-slate-500 flex items-center gap-1 font-medium">
-                                            <span
-                                                class="material-symbols-outlined text-sm text-emerald-600">pin_drop</span>
+                                            <span class="material-symbols-outlined text-sm text-emerald-600">pin_drop</span>
                                             Jakarta Barat (3.4 km)
                                         </span>
                                         <div
                                             class="flex items-center gap-1 bg-amber-50 border border-amber-200/80 px-2 py-0.5 rounded">
                                             <span class="material-symbols-outlined text-sm text-amber-500"
                                                 style="font-variation-settings: 'FILL' 1;">star</span>
-                                            <span
-                                                class="font-label-md text-label-md text-slate-900 font-bold">4.8</span>
+                                            <span class="font-label-md text-label-md text-slate-900 font-bold">4.8</span>
                                             <span class="font-label-sm text-xs text-slate-500">(95)</span>
                                         </div>
                                     </div>
@@ -709,16 +538,14 @@ e=" button">
                                     <div class="flex items-center justify-between gap-space-xs mb-1">
                                         <span
                                             class="font-body-sm text-body-sm text-slate-500 flex items-center gap-1 font-medium">
-                                            <span
-                                                class="material-symbols-outlined text-sm text-emerald-600">pin_drop</span>
+                                            <span class="material-symbols-outlined text-sm text-emerald-600">pin_drop</span>
                                             Tangerang Kota (5.1 km)
                                         </span>
                                         <div
                                             class="flex items-center gap-1 bg-amber-50 border border-amber-200/80 px-2 py-0.5 rounded">
                                             <span class="material-symbols-outlined text-sm text-amber-500"
                                                 style="font-variation-settings: 'FILL' 1;">star</span>
-                                            <span
-                                                class="font-label-md text-label-md text-slate-900 font-bold">4.9</span>
+                                            <span class="font-label-md text-label-md text-slate-900 font-bold">4.9</span>
                                             <span class="font-label-sm text-xs text-slate-500">(210)</span>
                                         </div>
                                     </div>
@@ -793,16 +620,14 @@ e=" button">
                                     <div class="flex items-center justify-between gap-space-xs mb-1">
                                         <span
                                             class="font-body-sm text-body-sm text-slate-500 flex items-center gap-1 font-medium">
-                                            <span
-                                                class="material-symbols-outlined text-sm text-emerald-600">pin_drop</span>
+                                            <span class="material-symbols-outlined text-sm text-emerald-600">pin_drop</span>
                                             Jakarta Selatan (2.1 km)
                                         </span>
                                         <div
                                             class="flex items-center gap-1 bg-amber-50 border border-amber-200/80 px-2 py-0.5 rounded">
                                             <span class="material-symbols-outlined text-sm text-amber-500"
                                                 style="font-variation-settings: 'FILL' 1;">star</span>
-                                            <span
-                                                class="font-label-md text-label-md text-slate-900 font-bold">4.7</span>
+                                            <span class="font-label-md text-label-md text-slate-900 font-bold">4.7</span>
                                             <span class="font-label-sm text-xs text-slate-500">(80)</span>
                                         </div>
                                     </div>
@@ -866,8 +691,7 @@ e=" button">
                                 </div>
                                 <div
                                     class="absolute top-3 right-3 bg-white/90 backdrop-blur-md px-2.5 py-1 rounded-lg font-label-sm text-[11px] text-slate-800 font-bold flex items-center gap-1 shadow-sm">
-                                    <span
-                                        class="material-symbols-outlined text-xs text-emerald-600">sports_baseball</span>
+                                    <span class="material-symbols-outlined text-xs text-emerald-600">sports_baseball</span>
                                     Tenis
                                 </div>
                             </div>
@@ -877,16 +701,14 @@ e=" button">
                                     <div class="flex items-center justify-between gap-space-xs mb-1">
                                         <span
                                             class="font-body-sm text-body-sm text-slate-500 flex items-center gap-1 font-medium">
-                                            <span
-                                                class="material-symbols-outlined text-sm text-emerald-600">pin_drop</span>
+                                            <span class="material-symbols-outlined text-sm text-emerald-600">pin_drop</span>
                                             Jakarta Pusat (4.2 km)
                                         </span>
                                         <div
                                             class="flex items-center gap-1 bg-amber-50 border border-amber-200/80 px-2 py-0.5 rounded">
                                             <span class="material-symbols-outlined text-sm text-amber-500"
                                                 style="font-variation-settings: 'FILL' 1;">star</span>
-                                            <span
-                                                class="font-label-md text-label-md text-slate-900 font-bold">4.8</span>
+                                            <span class="font-label-md text-label-md text-slate-900 font-bold">4.8</span>
                                             <span class="font-label-sm text-xs text-slate-500">(64)</span>
                                         </div>
                                     </div>
@@ -950,8 +772,7 @@ e=" button">
                                 </div>
                                 <div
                                     class="absolute top-3 right-3 bg-white/90 backdrop-blur-md px-2.5 py-1 rounded-lg font-label-sm text-[11px] text-slate-800 font-bold flex items-center gap-1 shadow-sm">
-                                    <span
-                                        class="material-symbols-outlined text-xs text-emerald-600">sports_soccer</span>
+                                    <span class="material-symbols-outlined text-xs text-emerald-600">sports_soccer</span>
                                     Futsal
                                 </div>
                             </div>
@@ -961,16 +782,14 @@ e=" button">
                                     <div class="flex items-center justify-between gap-space-xs mb-1">
                                         <span
                                             class="font-body-sm text-body-sm text-slate-500 flex items-center gap-1 font-medium">
-                                            <span
-                                                class="material-symbols-outlined text-sm text-emerald-600">pin_drop</span>
+                                            <span class="material-symbols-outlined text-sm text-emerald-600">pin_drop</span>
                                             Depok Margonda (3.9 km)
                                         </span>
                                         <div
                                             class="flex items-center gap-1 bg-amber-50 border border-amber-200/80 px-2 py-0.5 rounded">
                                             <span class="material-symbols-outlined text-sm text-amber-500"
                                                 style="font-variation-settings: 'FILL' 1;">star</span>
-                                            <span
-                                                class="font-label-md text-label-md text-slate-900 font-bold">4.6</span>
+                                            <span class="font-label-md text-label-md text-slate-900 font-bold">4.6</span>
                                             <span class="font-label-sm text-xs text-slate-500">(45)</span>
                                         </div>
                                     </div>
@@ -1122,103 +941,4 @@ e=" button">
             </script>
         </div>
     </main>
-    <footer class="w-full bg-slate-50 border-t border-slate-200 py-space-2xl text-slate-600">
-        <div class="w-full px-gutter">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-xl mb-space-2xl">
-                <div class="lg:col-span-2 space-y-space-md">
-                    <div class="flex items-center gap-2">
-                        <div
-                            class="w-8 h-8 rounded-lg bg-emerald-600 flex items-center justify-center text-white shadow-sm">
-                            <span class="material-symbols-outlined text-2xl font-bold">sports_tennis</span></div><span
-                            class="font-headline-md text-2xl font-extrabold tracking-tight text-slate-900">loc<span
-                                class="text-emerald-600">Arena</span></span>
-                    </div>
-                    <p class="font-body-md text-body-md text-slate-600 max-w-sm">Platform digital sewa lapangan dan
-                        arena olahraga modern di Indonesia. Temukan, pesan waktu main dengan konfirmasi instan dan
-                        digital pass otomatis.</p>
-                    <div class="space-y-space-xs pt-space-xs text-body-sm font-body-sm text-slate-500">
-                        <p class="">© 2025 locArena Indonesia. Hak Cipta Dilindungi Undang-Undang.</p>
-                        <div class="flex flex-wrap items-center gap-space-md text-xs"><a
-                                class="hover:text-slate-900 transition-colors" href="#">Ketentuan Layanan</a><span
-                                class="text-slate-300">•</span><a class="hover:text-slate-900 transition-colors"
-                                href="#">Kebijakan Privasi</a><span class="text-slate-300">•</span><a
-                                class="hover:text-slate-900 transition-colors" href="#">Keamanan Transaksi</a></div>
-                    </div>
-                </div>
-                <div>
-                    <div
-                        class="font-label-lg text-label-lg text-slate-900 mb-space-md uppercase font-bold tracking-wider">
-                        Kategori Populer</div>
-                    <ul class="space-y-space-sm font-body-md text-body-md">
-                        <li class=""><a class="hover:text-emerald-700 transition-colors" data-path="futsal-arenas"
-                                href="#">Sewa Lapangan Futsal</a></li>
-                        <li class=""><a class="hover:text-emerald-700 transition-colors" data-path="badminton-courts"
-                                href="#">Sewa Hall Badminton</a></li>
-                        <li class=""><a class="hover:text-emerald-700 transition-colors" data-path="mini-soccer-pitches"
-                                href="#">Sewa Lapangan Mini Soccer</a></li>
-                        <li class=""><a class="hover:text-emerald-700 transition-colors" data-path="basketball-arenas"
-                                href="#">Sewa Lapangan Basket</a></li>
-                        <li class=""><a class="hover:text-emerald-700 transition-colors" data-path="tennis-courts"
-                                href="#">Sewa Lapangan Tenis</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <div
-                        class="font-label-lg text-label-lg text-slate-900 mb-space-md uppercase font-bold tracking-wider">
-                        Pusat Bantuan</div>
-                    <ul class="space-y-space-sm font-body-md text-body-md">
-                        <li class=""><a class="hover:text-emerald-700 transition-colors" data-path="support-center"
-                                href="#">Customer Support</a></li>
-                        <li class=""><a class="hover:text-emerald-700 transition-colors" data-path="support-center"
-                                href="#">Kebijakan Reschedule</a></li>
-                        <li class=""><a class="hover:text-emerald-700 transition-colors" data-path="support-center"
-                                href="#">Sistem Arena Pass QR</a></li>
-                        <li class=""><a class="hover:text-emerald-700 transition-colors" data-path="support-center"
-                                href="#">Daftarkan Arena Anda</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <div
-                        class="font-label-lg text-label-lg text-slate-900 mb-space-md uppercase font-bold tracking-wider">
-                        Unduh Aplikasi</div>
-                    <p class="font-body-sm text-body-sm text-slate-500 mb-space-sm">Dapatkan tiket check-in turnstile
-                        offline di ponsel Anda.</p>
-                    <div class="space-y-space-xs">
-                        <div
-                            class="bg-white border border-slate-200 hover:bg-slate-100 transition-colors p-space-sm rounded-xl flex items-center gap-space-sm cursor-pointer shadow-sm">
-                            <span class="material-symbols-outlined text-emerald-600 text-2xl">install_mobile</span>
-                            <div>
-                                <div class="font-label-sm text-[11px] text-slate-500 font-semibold">Tersedia di</div>
-                                <div class="font-label-md text-label-md text-slate-900 font-bold">Google Play &amp; App
-                                    Store</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const sports = ['Badminton', 'Futsal', 'Mini Soccer', 'Basket', 'Voli', 'Tenis', 'Padel'];
-            let currentIndex = 0;
-            const sportTextElement = document.getElementById('dynamic-sport-text');
-
-            if (sportTextElement) {
-                setInterval(() => {
-                    sportTextElement.classList.add('opacity-0', '-translate-y-2');
-                    setTimeout(() => {
-                        currentIndex = (currentIndex + 1) % sports.length;
-                        sportTextElement.textContent = sports[currentIndex];
-                        sportTextElement.classList.remove('-translate-y-2');
-                        sportTextElement.classList.add('translate-y-2');
-                        void sportTextElement.offsetWidth;
-                        sportTextElement.classList.remove('opacity-0', 'translate-y-2');
-                    }, 300);
-                }, 2500);
-            }
-        });
-    </script>
-</body>
-
-</html>
+@endsection
